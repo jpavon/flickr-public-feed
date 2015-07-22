@@ -116,7 +116,7 @@ module.exports = HandlebarsCompiler.template({"compiler":[6,">= 2.0.0-beta.1"],"
 
   return "<div class=\"image__media\" style=\"background-image: url('"
     + alias1(this.lambda(((stack1 = (depth0 != null ? depth0.media : depth0)) != null ? stack1.m : stack1), depth0))
-    + "')\"></div>\n\n<div class=\"image__content\">\n\n	<h2 class=\"image__title\">\n		<a href=\"/#/images/"
+    + "')\"></div>\n\n<div class=\"image__content\">\n\n	<h2 class=\"image__title\">\n		<a href=\"#/images/"
     + alias1(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\">"
     + alias1(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(depth0,{"name":"title","hash":{},"data":data}) : helper)))
@@ -135,7 +135,7 @@ var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "<a class=\"btn image__btn-back\" href=\"/#/\">Back</a>\n\n<h2 class=\"image__title m-r2\">\n	<a href=\""
+  return "<a class=\"btn image__btn-back\" href=\"#/\">Back</a>\n\n<h2 class=\"image__title m-r2\">\n	<a href=\""
     + alias3(((helper = (helper = helpers.link || (depth0 != null ? depth0.link : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"link","hash":{},"data":data}) : helper)))
     + "\" target=\"_blank\">"
     + alias3(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"title","hash":{},"data":data}) : helper)))
