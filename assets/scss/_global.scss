@@ -1,0 +1,100 @@
+/* ------------------------------------------------------------
+	Global
+*/
+
+body {
+	margin: em(40) em(20);
+	background-color: #eee;
+}
+
+.main {
+	width: 100%;
+	max-width: em(900);
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+
+.main-title {
+	text-align: center;
+}
+
+
+/* ----------------------------
+	Images
+*/
+
+.images {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+
+/* ----------------------------
+	Image
+*/
+
+.image {
+	@extend .cf;
+
+	position: relative;
+	padding: em(20);
+	border-bottom: 1px solid #ccc;
+}
+
+	.image__media {
+		float: left;
+		width: 20%;
+		height: 150px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	.image__content {
+		float: left;
+		padding-left: em(20);
+		width: 80%;
+	}
+
+	.image__title {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.image__info {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+
+		li {
+			display: inline-block;
+			margin-right: em(20);
+
+			@include bp(800) {
+				display: block;
+				margin-bottom: em(10);
+			}
+		}
+	}
+
+	.image__tags {
+		a {
+			padding: em(2) em(6);
+			display: inline-block;
+			margin-right: em(10);
+			margin-bottom: em(8);
+			font-size: em(13);
+			background-color: $blue;
+			color: #fff;
+			border-radius: 3px;
+		}
+	}
+
+	.image__btn-back {
+		position: absolute;
+		right: em(20);
+		top: em(20);
+	}

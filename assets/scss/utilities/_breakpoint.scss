@@ -1,0 +1,52 @@
+/* ------------------------------------------------------------
+	Breakpoint
+
+Usage:
+	@include bp(400) {
+		//
+	}
+	@include bp(1000, 300) {
+		//
+	}
+	@include bp(false, 400) {
+		//
+	}
+	@include bp(grid) {
+		//
+	}
+*/
+
+@function getBreakpoint($name) {
+	@if (map-has-key($breakpoints, $name)) {
+		@return map-get($breakpoints, $name);
+	} @else {
+		@warn 'Breakpoint #{$name} does not exist';
+	}
+}
+
+@mixin bp($max: false, $min: false, $and: false) {
+
+	$mediaQuery: '';
+
+	@if $max {
+		@if type-of($max) != number {
+			$max: getBreakpoint($max);
+		}
+		$max: em($max) - .01;
+	}
+
+	@if $min {
+		@if type-of($min) != number {
+			$min: getBreakpoint($min);
+		}
+		$min: em($min);
+	}
+
+	@if $max { $mediaQuery: '#{$mediaQuery} and (max-width: #{$max})'; }
+	@if $min { $mediaQuery: '#{$mediaQuery} and (min-width: #{$min})'; }
+	@if $and { $mediaQuery: '#{$mediaQuery} and #{$and}'; }
+
+	@media #{all+$mediaQuery} {
+		@content;
+	}
+}

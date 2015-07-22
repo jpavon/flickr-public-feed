@@ -1,0 +1,23 @@
+// Fonts
+$bodyFont: 'Helvetica Neue', sans-serif;
+$headerFont: 'Helvetica Neue', sans-serif;
+
+
+// Colors
+$blue: #0071B5;
+$green: #47a447;
+
+// Base font size
+$baseFontSize: 15;
+
+
+// Breakpoints
+$breakpoints: (
+	grid: 760,
+	mobile: 420
+);
+
+
+// Grid
+$gutter: 20;
+$maxWidth: 1120;

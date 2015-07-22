@@ -1,0 +1,7 @@
+/* ------------------------------------------------------------
+	Em
+*/
+
+@function em($target, $context: $baseFontSize) {
+	@return ($target / $context) * 1em;
+}

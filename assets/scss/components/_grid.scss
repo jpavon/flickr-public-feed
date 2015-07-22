@@ -1,0 +1,119 @@
+/* ------------------------------------------------------------
+	Grid
+*/
+
+
+/* ------------------------------
+	Row / Cols
+*/
+
+.row {
+	@extend .cf;
+
+	position: relative;
+
+	max-width: em($maxWidth);
+	width: 100%;
+	margin: 0 auto;
+}
+
+// Row padding
+.row--padding {
+	padding-bottom: em($gutter * 2);
+	@include bp(grid) {
+		padding-bottom: 0;
+	}
+}
+
+// Columns
+.col {
+	position: relative;
+	float: left;
+
+	min-height: 1px;
+	padding: 0 em($gutter);
+}
+
+// Col padding
+.col--padding {
+	@include bp(grid) {
+		padding-bottom: em($gutter * 2);
+		.col:last-child {
+			padding-bottom: 0;
+		}
+	}
+}
+
+// Columns width
+@for $i from 1 through 12 {
+	@for $j from 1 through $i {
+		.col--#{$j}-#{$i} {
+			width: ($j / $i) * 100%;
+		}
+	}
+}
+
+// Breakpoint
+@include bp(grid) {
+	.row .col {
+		float: none;
+		width: auto;
+	}
+}
+
+
+/* ------------------------------
+	Nested rows
+*/
+
+.row .row {
+	width: auto;
+	max-width: none;
+	min-width: 0;
+	margin: 0 (em(-$gutter));
+	padding-bottom: 0;
+}
+
+
+/* ------------------------------
+	Offset columns
+*/
+
+@for $i from 1 through 12 {
+	@for $j from 1 through $i {
+		.col--offset-#{$j}-#{$i} {
+			margin-left: ($j / $i) * 100%;
+		}
+	}
+}
+
+@include bp(grid) {
+	[class*="col--offset"] {
+		margin-left: 0;
+	}
+}
+
+
+/* ------------------------------
+	Centered column
+*/
+
+.col--centered {
+	float: none;
+
+	margin: 0 auto;
+}
+
+
+/* ------------------------------
+	Opposite floated columns
+*/
+
+.col--float-left {
+	float: left;
+}
+
+.col--float-right {
+	float: right;
+}
+

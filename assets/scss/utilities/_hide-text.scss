@@ -1,0 +1,15 @@
+/* ------------------------------------------------------------
+	Hide text
+*/
+
+%hide-text, .hide-text {
+	border: 0;
+	overflow: hidden;
+	*text-indent: -9999px;
+	&:before {
+		content: "";
+		display: block;
+		width: 0;
+		height: 150%;
+	}
+}

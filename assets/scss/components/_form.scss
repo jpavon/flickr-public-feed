@@ -1,0 +1,51 @@
+/* ------------------------------------------------------------
+	Form
+*/
+
+.form {
+	ul {}
+
+	li { margin-bottom: 1em; }
+
+	label {}
+
+	input[type=text], input[type=email], input[type=number], input[type=tel], textarea {
+		padding: .6em;
+		width: 100%;
+	}
+
+	[type=text], input[type=email] {}
+
+	textarea { min-height: em(100); }
+
+	[type=submit] { @extend .btn; }
+
+	input:valid, textarea:valid { }
+	input:invalid, textarea:invalid { background-color: #f0dddd; }
+}
+
+
+/* ------------------------------
+	Gravity forms expecific
+*/
+
+%message {
+	margin-bottom: 1em;
+	padding: 1em;
+
+	color: #fff;
+}
+
+.validation_error {
+	@extend %message;
+	background-color: #d2322d;
+}
+
+.gform_confirmation_message {
+	@extend %message;
+	background-color: #47a447;
+}
+
+.validation_message {
+	color: #d2322d;
+}

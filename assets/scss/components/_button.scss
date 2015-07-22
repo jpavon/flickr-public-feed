@@ -1,0 +1,75 @@
+/* ------------------------------------------------------------
+	Button
+*/
+
+.btn {
+	-webkit-appearance: none;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	cursor: pointer;
+	display: inline-block;
+	font: inherit;
+	line-height: normal;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	white-space: normal;
+
+	&::focus {
+		outline: 1px dotted;
+		outline: 5px auto -webkit-focus-ring-color;
+	}
+	&:disabled, &.is-disabled {
+		cursor: default;
+		opacity: .3;
+	}
+	&::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+}
+
+
+
+/* ------------------------------
+	Styles
+*/
+
+.btn {
+	padding: .6em 1em;
+	border: 1px solid darken(#fff, 15%);
+	background-color: #fff;
+	color: $blue;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: em(11);
+	letter-spacing: .1em;
+
+	&:hover, &:focus, &:active {
+		border: 1px solid darken(#fff, 15%);
+		background-color: darken(#fff, 10%);
+		text-decoration: none;
+	}
+	&:active {
+		box-shadow: inset 0px 0px 10px rgba(#000, .4);
+	}
+}
+	.btn--success {
+		border: 1px solid darken($green, 5%);
+		background-color: $green;
+		color: #fff;
+
+		&:hover, &:focus, &:active {
+			border: 1px solid darken($green, 15%);
+			background-color: darken($green, 10%);
+			text-decoration: none;
+		}
+	}
+

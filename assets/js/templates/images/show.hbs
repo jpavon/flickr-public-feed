@@ -1,0 +1,30 @@
+<a class="btn image__btn-back" href="/#/">Back</a>
+
+<h2 class="image__title m-r2">
+	<a href="{{ link }}" target="_blank">{{ title }}</a>
+</h2>
+
+<ul class="image__info">
+	<li>
+		<a class="btn" href="{{ authorUrl author_id }}" target="_blank">Photo author</a>
+	</li>
+	<li>
+		{{ dateFormat published }}
+	</li>
+</ul>
+
+<div class="cf m-t1">
+	<div class="image__media" style="background-image: url('{{ media.m }}')"></div>
+
+	<div class="image__content">
+		<div class="image__tags">
+			<div class="m-b1">
+				{{ cleanDescription description or 'asdf' }}
+			</div>
+
+			<h4>Tags:</h4>
+			{{{ tagsLinks tags }}}
+		</div>
+	</div>
+</div>
+
