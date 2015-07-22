@@ -1,6 +1,7 @@
 {
   "name": "marionette-browserify-flickr-feed",
   "title": "Marionette.js & Browserify Flickr Feed",
+  "homepage": "http://jpavon.github.io/flickr-public-feed/",
   "description": "",
   "version": "0.0.1",
   "author": {

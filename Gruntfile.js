@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 
 		meta: {
-			banner: '/*! <%= pkg.title %> */\n'
+			banner: '/*! <%= pkg.title %> - <%= pkg.homepage %> */\n'
 		},
 
 		watch: {
@@ -116,8 +116,8 @@ module.exports = function(grunt) {
 				},
 				files: {
 					src: [
-						'assets/_/js/main.min.js',
-						'assets/_/css/style.min.css'
+						'dist/assets/js/app.min.js',
+						'dist/assets/css/style.min.css'
 					]
 				}
 			}
