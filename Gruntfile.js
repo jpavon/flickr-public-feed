@@ -55,7 +55,10 @@ module.exports = function(grunt) {
 				dest: 'assets/_/js/app.js',
 				options: {
 					extensions: ['.hbs'],
-					transform: ['hbsfy']
+					transform: ['hbsfy'],
+					browserifyOptions: {
+						debug: true
+					}
 				}
 			}
 		},
