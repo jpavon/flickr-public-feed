@@ -1,7 +1,5 @@
 var Backbone = require('backbone');
 
-var uuid = require('node-uuid');
-
 
 
 var id = 1;

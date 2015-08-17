@@ -31,7 +31,6 @@
     "jquery": "^2.1.4",
     "matchdep": "~0.3.0",
     "moment": "^2.10.3",
-    "node-uuid": "^1.4.3",
     "trim": "0.0.1"
   },
   "keywords": [],
